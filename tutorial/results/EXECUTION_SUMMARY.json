@@ -1,0 +1,185 @@
+{
+  "execution_date": "2026-05-25T17:35:25.359006",
+  "status": "COMPLETE",
+  "step_status": {
+    "Step 1: Data Generation": "[OK]",
+    "Step 2: POD Analysis": "[OK]",
+    "Step 3: POD-Galerkin ROM": "[OK]",
+    "Step 4: POD-NN Surrogate": "[FAIL]",
+    "Step 5: ROM Validation": "[OK]",
+    "Step 6: Cross-Case Analysis": "[OK]"
+  },
+  "all_results": {
+    "step1": {
+      "status": "SUCCESS",
+      "elapsed_time_seconds": 5.496189594268799,
+      "timestamp": "2026-05-25T17:34:48.830060",
+      "message": "All synthetic test data generated successfully",
+      "cases_generated": [
+        "cavity_flow",
+        "backward_facing_step",
+        "cylinder_flow"
+      ]
+    },
+    "step2": {
+      "case": "cavity_flow",
+      "status": "SUCCESS",
+      "elapsed_time_seconds": 3.4350905418395996,
+      "timestamp": "2026-05-25T17:34:52.266846",
+      "data_shape": [
+        32768,
+        500
+      ],
+      "modes_count": 500,
+      "energy_values": [
+        64.42791330830924,
+        52.735448825950044,
+        45.62915564753642,
+        6.127722671825646,
+        4.053963424398668,
+        4.046088712211735,
+        4.039439084207718,
+        4.033631485514799,
+        4.030396514141474,
+        4.0188169991187594,
+        4.014062151727741,
+        4.01113913846044,
+        4.00466894501055,
+        4.003661062728981,
+        4.000257264634062,
+        3.9988249686822845,
+        3.998469024024345,
+        3.9930441642031225,
+        3.9889714405465817,
+        3.987305041701665
+      ],
+      "cumulative_energy_90": 360.0,
+      "cumulative_energy_95": 427.0,
+      "cumulative_energy_99": 484.0
+    },
+    "step3": {
+      "status": "SUCCESS",
+      "elapsed_time_seconds": 1.772608757019043,
+      "timestamp": "2026-05-25T17:34:54.322178",
+      "prediction_shape": [
+        32768,
+        100
+      ],
+      "time_steps": 100,
+      "method": "RK45",
+      "time_span": [
+        0.0,
+        1.0
+      ]
+    },
+    "step4": {
+      "status": "FAILED",
+      "error": "could not broadcast input array from shape (32768,32768) into shape (32768,)"
+    },
+    "step5": {
+      "status": "SUCCESS",
+      "elapsed_time_seconds": 0.894418478012085,
+      "timestamp": "2026-05-25T17:35:12.898222",
+      "validation_metrics": {
+        "l2_error": "Relative L2 norm of reconstruction error",
+        "energy_error": "Relative kinetic energy difference"
+      },
+      "convergence_analysis": {
+        "5": {
+          "modes": 5,
+          "l2_error": 0.2276876872067478,
+          "energy_error": 0.07704950429551467,
+          "snapshot_range": "100 snapshots"
+        },
+        "10": {
+          "modes": 10,
+          "l2_error": 0.22743197632865175,
+          "energy_error": 0.07703307795851094,
+          "snapshot_range": "100 snapshots"
+        },
+        "15": {
+          "modes": 15,
+          "l2_error": 0.227153567024302,
+          "energy_error": 0.07701539572501502,
+          "snapshot_range": "100 snapshots"
+        },
+        "20": {
+          "modes": 20,
+          "l2_error": 0.22689882772529113,
+          "energy_error": 0.07699860585907249,
+          "snapshot_range": "100 snapshots"
+        },
+        "30": {
+          "modes": 30,
+          "l2_error": 0.22639699165786178,
+          "energy_error": 0.07696515419166933,
+          "snapshot_range": "100 snapshots"
+        }
+      },
+      "best_mode_count": "30"
+    },
+    "step6": {
+      "status": "SUCCESS",
+      "elapsed_time_seconds": 12.374108076095581,
+      "timestamp": "2026-05-25T17:35:25.307152",
+      "case_analysis": {
+        "cavity_flow": {
+          "snapshot_shape": [
+            32768,
+            500
+          ],
+          "total_modes": 500,
+          "modes_90_energy": 360,
+          "modes_95_energy": 427,
+          "modes_99_energy": 484,
+          "dominant_mode_energy_percent": 26.794911699574875,
+          "top_5_energies": [
+            64.42791330830924,
+            52.735448825950044,
+            45.62915564753642,
+            6.127722671825646,
+            4.053963424398668
+          ]
+        },
+        "backward_facing_step": {
+          "snapshot_shape": [
+            32768,
+            500
+          ],
+          "total_modes": 500,
+          "modes_90_energy": 395,
+          "modes_95_energy": 446,
+          "modes_99_energy": 488,
+          "dominant_mode_energy_percent": 25.778418813998293,
+          "top_5_energies": [
+            27.13576407303516,
+            20.86971727123199,
+            7.377665217023621,
+            2.8342648402446433,
+            2.0334777502887453
+          ]
+        },
+        "cylinder_flow": {
+          "snapshot_shape": [
+            32768,
+            500
+          ],
+          "total_modes": 500,
+          "modes_90_energy": 149,
+          "modes_95_energy": 311,
+          "modes_99_energy": 459,
+          "dominant_mode_energy_percent": 65.31638550887376,
+          "top_5_energies": [
+            82.44923731990124,
+            44.86143035881757,
+            4.838017440026105,
+            2.003976581936935,
+            2.00320578410443
+          ]
+        }
+      },
+      "summary": "Comparative analysis of three CFD test cases"
+    }
+  },
+  "results_directory": "D:\\Github\\POD_NN\\tutorial\\results"
+}

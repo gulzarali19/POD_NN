@@ -1,0 +1,15 @@
+{
+  "status": "SUCCESS",
+  "elapsed_time_seconds": 1.772608757019043,
+  "timestamp": "2026-05-25T17:34:54.322178",
+  "prediction_shape": [
+    32768,
+    100
+  ],
+  "time_steps": 100,
+  "method": "RK45",
+  "time_span": [
+    0.0,
+    1.0
+  ]
+}

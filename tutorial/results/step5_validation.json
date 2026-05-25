@@ -1,0 +1,42 @@
+{
+  "status": "SUCCESS",
+  "elapsed_time_seconds": 0.894418478012085,
+  "timestamp": "2026-05-25T17:35:12.898222",
+  "validation_metrics": {
+    "l2_error": "Relative L2 norm of reconstruction error",
+    "energy_error": "Relative kinetic energy difference"
+  },
+  "convergence_analysis": {
+    "5": {
+      "modes": 5,
+      "l2_error": 0.2276876872067478,
+      "energy_error": 0.07704950429551467,
+      "snapshot_range": "100 snapshots"
+    },
+    "10": {
+      "modes": 10,
+      "l2_error": 0.22743197632865175,
+      "energy_error": 0.07703307795851094,
+      "snapshot_range": "100 snapshots"
+    },
+    "15": {
+      "modes": 15,
+      "l2_error": 0.227153567024302,
+      "energy_error": 0.07701539572501502,
+      "snapshot_range": "100 snapshots"
+    },
+    "20": {
+      "modes": 20,
+      "l2_error": 0.22689882772529113,
+      "energy_error": 0.07699860585907249,
+      "snapshot_range": "100 snapshots"
+    },
+    "30": {
+      "modes": 30,
+      "l2_error": 0.22639699165786178,
+      "energy_error": 0.07696515419166933,
+      "snapshot_range": "100 snapshots"
+    }
+  },
+  "best_mode_count": "30"
+}

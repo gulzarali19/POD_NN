@@ -385,12 +385,12 @@ def generate_all_test_data(
     )
     cavity_dir = output_path / 'cavity_flow'
     cavity_dir.mkdir(parents=True, exist_ok=True)
-    np.save(cavity_dir / 'u_snapshots.npy', u_cav)
-    np.save(cavity_dir / 'v_snapshots.npy', v_cav)
-    np.save(cavity_dir / 'time_vector.npy', t_cav)
+    np.save(str(cavity_dir / 'u_snapshots.npy'), u_cav)
+    np.save(str(cavity_dir / 'v_snapshots.npy'), v_cav)
+    np.save(str(cavity_dir / 'time_vector.npy'), t_cav)
     with open(cavity_dir / 'parameters.json', 'w') as f:
         json.dump(meta_cav, f, indent=2)
-    print(f"✓ Saved to {cavity_dir}")
+    print(f"[OK] Saved to {cavity_dir}")
     print(f"  u shape: {u_cav.shape}, v shape: {v_cav.shape}")
     
     # Case 2: Backward Facing Step
@@ -400,12 +400,12 @@ def generate_all_test_data(
     )
     step_dir = output_path / 'backward_facing_step'
     step_dir.mkdir(parents=True, exist_ok=True)
-    np.save(step_dir / 'u_snapshots.npy', u_step)
-    np.save(step_dir / 'v_snapshots.npy', v_step)
-    np.save(step_dir / 'time_vector.npy', t_step)
+    np.save(str(step_dir / 'u_snapshots.npy'), u_step)
+    np.save(str(step_dir / 'v_snapshots.npy'), v_step)
+    np.save(str(step_dir / 'time_vector.npy'), t_step)
     with open(step_dir / 'parameters.json', 'w') as f:
         json.dump(meta_step, f, indent=2)
-    print(f"✓ Saved to {step_dir}")
+    print(f"[OK] Saved to {step_dir}")
     print(f"  u shape: {u_step.shape}, v shape: {v_step.shape}")
     
     # Case 3: Cylinder Flow
@@ -415,16 +415,16 @@ def generate_all_test_data(
     )
     cyl_dir = output_path / 'cylinder_flow'
     cyl_dir.mkdir(parents=True, exist_ok=True)
-    np.save(cyl_dir / 'u_snapshots.npy', u_cyl)
-    np.save(cyl_dir / 'v_snapshots.npy', v_cyl)
-    np.save(cyl_dir / 'time_vector.npy', t_cyl)
+    np.save(str(cyl_dir / 'u_snapshots.npy'), u_cyl)
+    np.save(str(cyl_dir / 'v_snapshots.npy'), v_cyl)
+    np.save(str(cyl_dir / 'time_vector.npy'), t_cyl)
     with open(cyl_dir / 'parameters.json', 'w') as f:
         json.dump(meta_cyl, f, indent=2)
-    print(f"✓ Saved to {cyl_dir}")
+    print(f"[OK] Saved to {cyl_dir}")
     print(f"  u shape: {u_cyl.shape}, v shape: {v_cyl.shape}")
     
     print("\n" + "=" * 70)
-    print("✓ ALL TEST DATA GENERATED SUCCESSFULLY")
+    print("[SUCCESS] ALL TEST DATA GENERATED")
     print("=" * 70)
 
 

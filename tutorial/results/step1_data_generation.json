@@ -1,0 +1,11 @@
+{
+  "status": "SUCCESS",
+  "elapsed_time_seconds": 5.496189594268799,
+  "timestamp": "2026-05-25T17:34:48.830060",
+  "message": "All synthetic test data generated successfully",
+  "cases_generated": [
+    "cavity_flow",
+    "backward_facing_step",
+    "cylinder_flow"
+  ]
+}

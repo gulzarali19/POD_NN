@@ -1,0 +1,62 @@
+{
+  "status": "SUCCESS",
+  "elapsed_time_seconds": 12.374108076095581,
+  "timestamp": "2026-05-25T17:35:25.307152",
+  "case_analysis": {
+    "cavity_flow": {
+      "snapshot_shape": [
+        32768,
+        500
+      ],
+      "total_modes": 500,
+      "modes_90_energy": 360,
+      "modes_95_energy": 427,
+      "modes_99_energy": 484,
+      "dominant_mode_energy_percent": 26.794911699574875,
+      "top_5_energies": [
+        64.42791330830924,
+        52.735448825950044,
+        45.62915564753642,
+        6.127722671825646,
+        4.053963424398668
+      ]
+    },
+    "backward_facing_step": {
+      "snapshot_shape": [
+        32768,
+        500
+      ],
+      "total_modes": 500,
+      "modes_90_energy": 395,
+      "modes_95_energy": 446,
+      "modes_99_energy": 488,
+      "dominant_mode_energy_percent": 25.778418813998293,
+      "top_5_energies": [
+        27.13576407303516,
+        20.86971727123199,
+        7.377665217023621,
+        2.8342648402446433,
+        2.0334777502887453
+      ]
+    },
+    "cylinder_flow": {
+      "snapshot_shape": [
+        32768,
+        500
+      ],
+      "total_modes": 500,
+      "modes_90_energy": 149,
+      "modes_95_energy": 311,
+      "modes_99_energy": 459,
+      "dominant_mode_energy_percent": 65.31638550887376,
+      "top_5_energies": [
+        82.44923731990124,
+        44.86143035881757,
+        4.838017440026105,
+        2.003976581936935,
+        2.00320578410443
+      ]
+    }
+  },
+  "summary": "Comparative analysis of three CFD test cases"
+}
