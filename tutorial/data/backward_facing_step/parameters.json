@@ -1,0 +1,11 @@
+{
+  "case": "backward_facing_step",
+  "description": "Backward-facing step with recirculation",
+  "grid_size": 128,
+  "n_snapshots": 500,
+  "Reynolds_number": 389.0,
+  "domain": "(0, 3) x (-0.5, 0.5)",
+  "boundary_conditions": "Parabolic inlet, zero-gradient outlet, slip/no-slip walls",
+  "characteristic_length": 1.0,
+  "characteristic_velocity": 1.0
+}

@@ -1,0 +1,11 @@
+{
+  "case": "cavity_flow",
+  "description": "Lid-driven cavity flow",
+  "grid_size": 128,
+  "n_snapshots": 500,
+  "Reynolds_number": 1000.0,
+  "domain": "(0, 1) x (0, 1)",
+  "boundary_conditions": "No-slip on 3 walls, moving lid on top",
+  "n_modes_dominant": 6,
+  "characteristic_velocity": 1.0
+}

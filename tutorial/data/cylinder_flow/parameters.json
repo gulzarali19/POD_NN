@@ -1,0 +1,12 @@
+{
+  "case": "cylinder_flow",
+  "description": "Circular cylinder in cross-flow (Von K\u00e1rm\u00e1n vortex street)",
+  "grid_size": 128,
+  "n_snapshots": 500,
+  "Reynolds_number": 100.0,
+  "cylinder_diameter": 1.0,
+  "domain": "(-2, 4) x (-2, 2)",
+  "boundary_conditions": "No-slip on cylinder, slip on far-field",
+  "Strouhal_number": 0.164,
+  "shedding_frequency": 0.164
+}
